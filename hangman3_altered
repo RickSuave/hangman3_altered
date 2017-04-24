@@ -1,0 +1,350 @@
+
+package dropbox;
+import java.util.Scanner;
+
+public class Dropbox {
+
+    public static void main(String[] args) {
+        
+            Scanner guess = new Scanner(System.in);
+            System.out.println("Hello! Welcome to Hangman!!");
+            System.out.println("Difficulty(1 through 3): ");
+            int diff = guess.nextInt();
+            if (diff == 1)
+
+            {
+                Play obj = new Play();
+                obj.Start(diff);
+            } else {
+                if (diff == 2) {
+                    Play obj = new Play();
+                    obj.Start(diff);
+                } else {
+                    Play obj = new Play();
+                    obj.Start(3);
+                }
+            }
+
+            switch (diff) {
+                case 1:
+                    Play obj = new Play();
+                    obj.Start(diff);
+                    break;
+                case 2:
+                    Play obj = new Play();
+                    obj.Start(diff);
+                    break;
+                case 3:
+                    Play obj = new Play();
+                    obj.Start(diff);
+                    break;
+                default:
+                    Play obj = new Play();
+                    obj.Start(diff);
+
+            }
+
+        }
+  
+    }
+    
+CLASS TWO____________________________________________________________________________________________    
+package dropbox;
+
+import java.util.Scanner;
+import java.util.Random;
+
+
+public class dropbox2 {
+    
+    public void Play() {
+
+
+        public void Start (int diff)
+        {
+            //Determine the difficulty
+            String words[] = new String[24];
+            String hints[] = new String[24];
+            switch (diff) {
+                case 1:
+
+                    words[0] = "Bird";
+                    hints[0] = "feather";
+                    words[1] = "Lizard";
+                    hints[1] = "scales";
+                    words[2] = "clock";
+                    hints[2] = "time";
+                    words[3] = "breakfast";
+                    hints[3] = "The most important meal of the day";
+                    words[4] = "text";
+                    hints[4] = "instant communication";
+                    words[5] = "mixture";
+                    hints[5] = "concoction";
+                    words[6] = "beats";
+                    hints[6] = "musical component";
+                    words[7] = "animal";
+                    hints[7] = "Think cat, dog, tiger, etc.";
+                    words[8] = "college";
+                    hints[8] = "higher learning";
+                    words[9] = "plant";
+                    hints[9] = "Loves sunlight";
+                    words[10] = "pen";
+                    hints[10] = "Office tool.";
+                    words[11] = "pencil";
+                    hints[11] = "Office tool.";
+                    words[12] = "paper";
+                    hints[12] = "Office tool.";
+                    words[13] = "note";
+                    hints[13] = "what you give your jr. high crush";
+                    words[14] = "fog";
+                    hints[14] = "Form of percipitation.";
+                    words[15] = "fire";
+                    hints[15] = "Where there's smoke..";
+                    words[16] = "bake";
+                    hints[16] = "brownies";
+                    words[17] = "alone";
+                    hints[17] = "Without Others.";
+                    words[18] = "drive";
+                    hints[18] = "Ryan Gosling";
+                    words[19] = "life";
+                    hints[19] = "Se La..";
+                    words[20] = "city";
+                    hints[20] = "bigger than a town";
+                    words[21] = "sunny";
+                    hints[21] = "Sunlight.";
+                    words[22] = "shine";
+                    hints[22] = "rise and..";
+                    words[24] = "hair";
+                    hints[24] = "on your head";
+
+                    break;
+                case 2:
+                    words[0] = "president";
+                    hints[0] = "POTUS";
+                    words[1] = "exclamation";
+                    hints[1] = "Shout out.";
+                    words[2] = "statement";
+                    hints[2] = "To say.";
+                    words[3] = "television";
+                    hints[3] = "one of America's addictions";
+                    words[4] = "physics";
+                    hints[4] = "Form of Science.";
+                    words[5] = "algebra";
+                    hints[5] = "Form of math.";
+                    words[6] = "trigonometry";
+                    hints[5] = "Soh Cah Toa";
+                    words[7] = "difficult";
+                    hints[7] = "challenging";
+                    words[8] = "aggresive";
+                    hints[8] = "Intense.";
+                    words[9] = "coding";
+                    hints[9] = "Foundations of programming";
+                    words[10] = "destroyer";
+                    hints[10] = "large naval boat.";
+                    words[11] = "variable";
+                    hints[11] = "always declare your";
+                    words[12] = "brunch";
+                    hints[12] = "breakfast, _____ , lunch";
+                    words[13] = "Unicorn";
+                    hints[13] = "magical beast";
+                    words[14] = "baseball";
+                    hints[14] = "Americas past-time";
+                    words[15] = "soccer";
+                    hints[15] = "Futbol";
+                    words[16] = "football";
+                    hints[16] = "Sport that owns a certain day of the week";
+                    words[17] = "basketball";
+                    hints[17] = "Sports.";
+                    words[18] = "bias";
+                    hints[18] = "One sided.";
+                    words[19] = "magazine";
+                    hints[19] = "Form of book.";
+                    words[20] = "computer";
+                    hints[20] = "Apple";
+                    words[21] = "internet";
+                    hints[21] = "more free information than you could ever use";
+                    words[23] = "system";
+                    hints[23] = "Network.";
+                    words[24] = "unison";
+                    hints[24] = "As one.";
+
+                    break;
+                case 3:
+                    words[0] = "amalgamation";
+                    hints[0] = "Mixture.";
+                    words[1] = "motorcycle";
+                    hints[1] = "two wheels";
+                    words[2] = "establishment";
+                    hints[2] = "Institution.";
+                    words[3] = "rehabilitation";
+                    hints[3] = "Reform.";
+                    words[4] = "rhinoceros";
+                    hints[4] = "endangered African animal.";
+                    words[5] = "triceratops";
+                    hints[5] = "Dinosaur.";
+                    words[6] = "declaration";
+                    hints[6] = "The Founding Fathers made this";
+                    words[7] = "announcement";
+                    hints[7] = "A formal...";
+                    words[8] = "binomial";
+                    hints[8] = "Form of a monomial.";
+                    words[9] = "polynomial";
+                    hints[9] = "form of a trinomial.";
+                    words[10] = "boulevard";
+                    hints[10] = "street";
+                    words[11] = "homework";
+                    hints[11] = "your favorite part of school";
+                    words[12] = "anatomy";
+                    hints[12] = "human structure";
+                    words[13] = "description";
+                    hints[13] = "Describe.";
+                    words[14] = "perscription";
+                    hints[14] = "pharmaceutical";
+                    words[15] = "bandwagon";
+                    hints[15] = "jump on";
+                    words[16] = "address";
+                    hints[16] = "your place";
+                    words[17] = "university";
+                    hints[17] = "after SLCC";
+                    words[18] = "mischievous";
+                    hints[18] = "Sketchy";
+                    words[19] = "bewildered";
+                    hints[19] = "Puzzled, Confused.";
+                    words[20] = "assumption";
+                    hints[20] = "jumping to conclusions";
+                    words[21] = "designation";
+                    hints[21] = "Assign.";
+                    words[22] = "disgusting";
+                    hints[22] = "Nasty, Gross.";
+                    words[23] = "prolong";
+                    hints[23] = "to continue on";
+
+
+            }
+            //Create blanks
+            String word;
+            Random rand = new Random();
+            int w1 = rand.nextInt(26);
+            word = words[w1];
+            String hint = hints[w1];
+            String guess = "";
+            int wl = word.length() + 1;
+            for (int i = 1; i < wl; i++) {
+                guess += "-";
+            }
+            //Start the guessing!
+            String lu = "";
+            int tt = 0;
+            boolean canPlay = true;
+            Main(guess, tt, canPlay, lu, word, hint);
+        }
+        public void Main (String guess,int tt, boolean canPlay, String lu, String word, String hint)
+        {
+            if (tt == 6) {
+                canPlay = false;
+                Lose();
+            } else {
+        /*
+          Put man here
+          --
+          O |
+         /|\|
+         / \|
+         _____
+        */
+                String man[] = new String[7];
+                man[0] = " --\n   |\n   |\n   |\n_____\n";
+                man[1] = " --\n O |\n   |\n   |\n_____\n";
+                man[2] = " --\n O |\n/  |\n   |\n_____\n";
+                man[3] = " --\n O |\n/| |\n   |\n_____\n";
+                man[4] = " --\n O |\n/|\\|\n   |\n_____\n";
+                man[5] = " --\n O |\n/|\\|\n/  |\n_____\n";
+                man[6] = " --\n O |\n/|\\|\n/ \\|\n_____\n";
+                char g1[] = guess.toCharArray();
+                char w2[] = word.toCharArray();
+                System.out.println(man[0]);
+                for (int x = 0; x < g1.length; x++) {
+                    System.out.print(g1[x]);
+                }
+                System.out.println();
+                Guess(guess, tt, canPlay, lu, word, g1, w2, man, hint);
+            }
+        }
+        public void Guess (String guess,int tt, boolean canPlay, String lu, String word,char g1[], char w2[], String man[],
+        String hint)
+        {
+            String tg1 = new String(g1);
+            String tg2 = new String(w2);
+            if (tg1.equals(tg2)) {
+                Win();
+            } else {
+                if (tt == 6) {
+                    System.out.println("\n\nYou Lost! The secret word was: " + word);
+
+                    Lose();
+                } else {
+                    Scanner input = new Scanner(System.in);
+                    System.out.print("Guess(" + hint + "): ");
+                    String letter = input.next();
+                    if (word.contains(letter)) {
+                        if (lu.contains(letter)) {
+                            tt += 1;
+                            System.out.println("incorrect!");
+                        } else {
+                            int wl = word.length();
+                            for (int i = 0; i < wl; i++) {
+                                char aChar = letter.charAt(0);
+                                char bChar = w2[i];
+                                if (bChar == aChar) {
+                                    g1[i] = aChar;
+                                }
+                            }
+                        }
+                    } else {
+                        tt += 1;
+                        System.out.println("incorrect!");
+                        lu += letter;
+                    }
+                    System.out.println();
+                    System.out.println(man[tt]);
+                    for (int x = 0; x < g1.length; x++) {
+                        System.out.print(g1[x]);
+                    }
+                    System.out.println("\n\n");
+                    lu += letter;
+                    Guess(guess, tt, canPlay, lu, word, g1, w2, man, hint);
+                }
+            }
+        }
+                
+        public void Win ()
+        {
+            System.out.println("\n\n\\o/\n | \n/ \\");
+            System.out.println("Wiiiiinnnnnneeeeeerrrrrrrrrr!\n");
+            Scanner input2 = new Scanner(System.in);
+            System.out.print("\nTry Again?(Y/N): ");
+            String pa = input2.next();
+            if (pa.contains("y") || pa.contains("Y")) {
+                System.out.print("\nDifficulty(1 through 3): ");
+                int diff2 = input2.nextInt();
+                Start(diff2);
+            } else {
+            }
+            
+        }
+        public void Lose ()
+        {
+            Scanner input1 = new Scanner(System.in);
+            System.out.print("\nTry Again?(Y/N): ");
+            String pa1 = input1.next();
+            if (pa1.contains("y") || pa1.contains("Y")) {
+                System.out.print("\nDifficulty(1 through 3): ");
+                int diff1 = input1.nextInt();
+                Start(diff1);
+            } else {
+            }
+        }
+
+        }
+    
+}
